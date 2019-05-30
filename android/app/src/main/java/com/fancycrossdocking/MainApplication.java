@@ -92,7 +92,7 @@ public class MainApplication extends Application implements ReactApplication {
       outputFile.setReadable(true, false);
       outputFile.setWritable(true, false);
       if(outputFile.renameTo(finalFile)){
-        Toast.makeText(getApplicationContext(), "Wedge Profile Loaded!", Toast.LENGTH_LONG ).show();
+        //Toast.makeText(getApplicationContext(), "Wedge Profile Loaded!", Toast.LENGTH_LONG ).show();
       }else{
         Toast.makeText(getApplicationContext(), "Wedge Profile NOT Loaded!", Toast.LENGTH_LONG ).show();
       }
