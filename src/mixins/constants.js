@@ -42,6 +42,11 @@ export default {
     deleted: 'Deleted',
     fulfilled: 'Fulfilled',
   },
+  deliveryContentType: {
+    full: 'Full',
+    partial: 'Partial',
+    return: 'Return'
+  },
   handlingState: {
     incoming: 'Incoming',
     stocked: 'Stocked',

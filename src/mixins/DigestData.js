@@ -236,7 +236,8 @@ export const setMessageForHandlingState = async (parcel, sound) => {
   }
 
   /** return goods */
-  if (parcel.orderStatus === Constants.status.failed) {
+  if (parcel.orderStatus === Constants.status.failed
+    || parcel.deliveryContentType === Constants.deliveryContentType.return) {
     sound.warehouse.play();
     return getReturnGoods(parcel, pv, hlv);
   }
