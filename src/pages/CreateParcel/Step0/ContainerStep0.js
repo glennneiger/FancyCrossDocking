@@ -33,7 +33,6 @@ export default class ContainerStep0 extends Component {
 
   navigateToNextScreen = (item) => {
     const { navigation: { navigate } } = this.props;
-    console.log(item);
 
     navigate(Constants.routeName.createParcelStep1, {
       milkname: item.id

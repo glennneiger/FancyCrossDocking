@@ -84,7 +84,6 @@ export default class ContainerStep2 extends Component {
   };
 
   retryAfterError = () => {
-    console.log('retry');
     this.closeError();
     this.confirmData();
   };

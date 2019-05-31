@@ -27,7 +27,9 @@ class TakeBarcode extends Component {
       // JSON (QR-code)
       try {
         const json = JSON.parse(scanResult.data);
-        if (json.milkmanTrackingCode) {
+        if (typeof json === 'number') {
+          onTakeBarcode(json);
+        } else if (json.milkmanTrackingCode) {
           onTakeBarcode(json.milkmanTrackingCode);
         }
         return;
@@ -37,7 +39,7 @@ class TakeBarcode extends Component {
 
       // MLK- prefixed
       const match = scanResult.data.match(/(mlk-|MLK-)([0-9]+)/);
-      if (match.length) {
+      if (match && match.length) {
         onTakeBarcode(match[2]);
         return;
       }
