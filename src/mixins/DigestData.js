@@ -293,7 +293,8 @@ export const setMessageForException = async (parcel, data, sound, res) => {
   }
 
   /** return goods */
-  if (parcel.orderStatus === Constants.status.failed) {
+  if (parcel.orderStatus === Constants.status.failed
+    || parcel.deliveryContentType === Constants.deliveryContentType.return) {
     sound.warehouse.play();
     return {
       ...getReturnGoods(parcel),
