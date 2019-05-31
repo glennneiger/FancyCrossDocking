@@ -16,10 +16,11 @@
     "moment-timezone": "^0.5.23",
     "prop-types": "^15.7.2",
     "react": "16.8.3",
-    "react-native": "0.59.3",
+    "react-native": "^0.59.8",
     "react-native-camera": "^2.2.0",
     "react-native-datawedge-intents": "git+https://github.com/milkman-deliveries/react-native-datawedge-intents.git",
     "react-native-fs": "^2.13.3",
+    "react-native-orientation": "^3.1.3",
     "react-native-sound": "^0.10.9",
     "react-native-svg": "^9.3.7",
     "react-navigation": "^2.0.1"

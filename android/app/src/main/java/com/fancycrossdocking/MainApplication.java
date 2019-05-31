@@ -31,6 +31,7 @@ import com.rnfs.RNFSPackage;
 
 import com.fancycrossdocking.module.HoneywellDataReceiverPackage;
 import com.fancycrossdocking.module.MunBynDataReceiverPackage;
+import com.github.yamill.orientation.OrientationPackage;
 
 public class MainApplication extends Application implements ReactApplication {
   private static final String autoImportDir = "/enterprise/device/settings/datawedge/autoimport/";
@@ -55,7 +56,8 @@ public class MainApplication extends Application implements ReactApplication {
         new RNCViewPagerPackage(),
         new RNFSPackage(),
         new HoneywellDataReceiverPackage(),
-        new MunBynDataReceiverPackage()
+        new MunBynDataReceiverPackage(),
+        new OrientationPackage()
       );
     }
 
@@ -92,7 +94,7 @@ public class MainApplication extends Application implements ReactApplication {
       outputFile.setReadable(true, false);
       outputFile.setWritable(true, false);
       if(outputFile.renameTo(finalFile)){
-        //Toast.makeText(getApplicationContext(), "Wedge Profile Loaded!", Toast.LENGTH_LONG ).show();
+        Toast.makeText(getApplicationContext(), "Wedge Profile Loaded!", Toast.LENGTH_LONG ).show();
       }else{
         Toast.makeText(getApplicationContext(), "Wedge Profile NOT Loaded!", Toast.LENGTH_LONG ).show();
       }
